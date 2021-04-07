@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 import ru.netology.jdbc.model.Product;
+import ru.netology.jdbc.model.User;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,6 +28,16 @@ public class DataBaseJDBCRepository {
 
     public String getProductName(String name) {
         scriptSelect = read(pathScript);
+
+//        User user = jdbcTemplate.queryForObject(scriptSelect,
+//                (rs, rowNum) -> new User(rs.getString("name"), rs.getString("surname")), name);
+//        if (user != null) {
+//            return user.getSurname();
+//        }
+//        else {
+//            System.out.println(name + " ничего не купил!");
+//            return null;
+//        }
         Product product = jdbcTemplate.queryForObject(scriptSelect,
                 (rs, rowNum) -> new Product(rs.getString("name"), rs.getString("product_name")), name);
         if (product != null) {

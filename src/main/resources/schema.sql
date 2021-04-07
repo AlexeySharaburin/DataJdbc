@@ -1,3 +1,5 @@
+create schema netology;
+
 create table CUSTOMERS
 (
     id           serial      NOT NULL,
