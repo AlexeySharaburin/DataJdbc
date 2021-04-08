@@ -23,7 +23,7 @@ public class DataBaseJDBCRepository {
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     private String scriptSelect;
-    private String pathScript = "selectProduct_nameName.sql";
+    private String pathScript = "select_product_name.sql";
 
     public String getProductName(String name) {
 
