@@ -18,7 +18,7 @@ public class DataBaseJDBCController {
     @GetMapping("/products/fetch-product")
     public String getProductName(String name) {
         String product_name = dataBaseJDBCService.getProductName(name);
-        System.out.println("Клиент " + name + "купил продукт" + product_name);
-        return product_name;
+            System.out.println("Клиент по имени " + name + " купил продукт под названием " + product_name);
+            return product_name;
     }
 }
