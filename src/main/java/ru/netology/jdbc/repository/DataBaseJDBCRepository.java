@@ -19,9 +19,6 @@ public class DataBaseJDBCRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-
     private String scriptSelect;
     private String pathScript = "select_product_name.sql";
 
